@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-deployment
+  name: argocd-notification-hub
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: my-deployment
+      app: argocd-notification-hub
   template:
     metadata:
       labels:
-        app: my-deployment
+        app: argocd-notification-hub
     spec:
       containers:
-        - name: my-app-container
-          image: ghcr.io/visiongeist/argocd-notification-hub@sha256:08a495ef44ed0ab17f7f6b674279f99233c9c72ab3c5885d85c1ded368f33fb9
+        - name: argocd-notification-hun
+          image: ghcr.io/visiongeist/argocd-notification-hub:main
           imagePullPolicy: Always
           ports:
-            - containerPort: 8000 
+            - containerPort: 8000
