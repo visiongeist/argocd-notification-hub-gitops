@@ -16,6 +16,6 @@ spec:
       containers:
         - name: argocd-notification-hun
           image: ghcr.io/visiongeist/argocd-notification-hub:main
-          imagePullPolicy: Always
+          imagePullPolicy: Never # bc of issues with M1 image pulling
           ports:
             - containerPort: 8000
